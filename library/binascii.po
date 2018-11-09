@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Python 3.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-28 15:29+0200\n"
-"PO-Revision-Date: 2017-08-10 00:59+0200\n"
+"PO-Revision-Date: 2018-11-10 02:57+0100\n"
 "Last-Translator: Julien Palard <julien@palard.fr>\n"
 "Language-Team: FRENCH <traductions@lists.afpy.org>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: ../Doc/library/binascii.rst:2
 msgid ":mod:`binascii` --- Convert between binary and ASCII"
-msgstr ""
+msgstr ":mod:`binascii` --- Conversion entre binaire et ASCII"
 
 #: ../Doc/library/binascii.rst:15
 msgid ""
@@ -28,6 +28,12 @@ msgid ""
 "low-level functions written in C for greater speed that are used by the "
 "higher-level modules."
 msgstr ""
+"Le module :mod:`binascii` contient des méthodes de conversion entre du "
+"binaire et divers répresentations d'encodage ASCII. Normalement, vous "
+"n'utiliserez pas ces fonctions directement mais plutôt des modules de "
+"surcouche tels que :mod:`uu`, mod:`base64`, ou :mod:`binhex`. Le module :mod:"
+"`binascii` contient des fonctions bas-niveau écrites en C pour de meilleurs "
+"performances qui sont utilisée par des modules de plus haut niveau."
 
 #: ../Doc/library/binascii.rst:24
 msgid ""
@@ -36,14 +42,21 @@ msgid ""
 "(such as :class:`bytes`, :class:`bytearray` and other objects that support "
 "the buffer protocol)."
 msgstr ""
+"Les fonctions ``a2b_*`` acceptent des chaînes de caractères Unicode "
+"contenant uniquement des caractères ASCII. D'autres fonctions acceptent "
+"uniquement des :term:`bytes-like objects <bytes-like object>` (tels que :"
+"class:`bytes`, :class:`bytearray` et d'autres objets supportant le protocole "
+"de tampon)."
 
 #: ../Doc/library/binascii.rst:29
 msgid "ASCII-only unicode strings are now accepted by the ``a2b_*`` functions."
 msgstr ""
+"Les chaînes de caractères uniquement en ASCII sont désormais acceptées par "
+"les fonctions ``a2b_*``."
 
 #: ../Doc/library/binascii.rst:33
 msgid "The :mod:`binascii` module defines the following functions:"
-msgstr ""
+msgstr "Le modules :mod:`binascii` définit les fonctions suivantes :"
 
 #: ../Doc/library/binascii.rst:38
 msgid ""
@@ -51,6 +64,10 @@ msgid ""
 "data. Lines normally contain 45 (binary) bytes, except for the last line. "
 "Line data may be followed by whitespace."
 msgstr ""
+"Convertis une seule ligne de données encodée au format *uuencode* vers le "
+"format binaire. Les lignes contiennent normalement 45 octets (binaires), à "
+"l'exception de la dernière ligne. Une ligne de donnée peut être suivie de "
+"caractères blancs."
 
 #: ../Doc/library/binascii.rst:45
 msgid ""
@@ -59,6 +76,10 @@ msgid ""
 "most 45. If *backtick* is true, zeros are represented by ``'`'`` instead of "
 "spaces."
 msgstr ""
+"Convertis de la donnée binaire vers une ligne de caractères en ASCII, la "
+"valeur de retour est la ligne convertie, incluant un caractère de retour à "
+"la ligne. La longeur de *data* devrait être au moins 45. Si *backtick* est "
+"vrai, les zéros sont représentés par ``'`'`` plutôt que par des espaces."
 
 #: ../Doc/library/binascii.rst:49
 msgid "Added the *backtick* parameter."
@@ -69,6 +90,8 @@ msgid ""
 "Convert a block of base64 data back to binary and return the binary data. "
 "More than one line may be passed at a time."
 msgstr ""
+"Convertis un bloc de données *base64* en du binaire et retourne la donnée "
+"binaire. Plus d'une ligne peut être envoyée en paramètre à la fois."
 
 #: ../Doc/library/binascii.rst:61
 msgid ""
@@ -76,10 +99,14 @@ msgid ""
 "return value is the converted line, including a newline char if *newline* is "
 "true.  The output of this function conforms to :rfc:`3548`."
 msgstr ""
+"Convertis de la donnée binaire en une ligne de caractères ASCII encodé en  "
+"en *base64*. La valeur de retour est la ligne convertis, incluant un "
+"caractère de retour a la ligne si *newline* est vrai. La sortie de cette "
+"fonction est conforme à la rfc :rfc:`3548`."
 
 #: ../Doc/library/binascii.rst:65
 msgid "Added the *newline* parameter."
-msgstr ""
+msgstr "Ajout du paramètre *newline*."
 
 #: ../Doc/library/binascii.rst:71
 msgid ""
@@ -174,12 +201,17 @@ msgstr ""
 #: ../Doc/library/binascii.rst:167
 msgid "Exception raised on errors. These are usually programming errors."
 msgstr ""
+"Exceptions levées en cas d'erreur. Celles-ci sont généralement des erreurs "
+"de programmation"
 
 #: ../Doc/library/binascii.rst:172
 msgid ""
 "Exception raised on incomplete data. These are usually not programming "
 "errors, but may be handled by reading a little more data and trying again."
 msgstr ""
+"Exceptions levées en cas de donnée incomplète. Ce ne sont généralement pas "
+"des erreurs de programmation, mais elles peuvent être gérées en lisant un "
+"peu plus de données et en réessayant."
 
 #: ../Doc/library/binascii.rst:180
 msgid "Module :mod:`base64`"
